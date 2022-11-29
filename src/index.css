@@ -28,7 +28,8 @@ code {
   }
 }
 
-.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
-  min-height: fit-content;
-  padding: 40px;
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper,
+.css-uhb5lp {
+  min-height: fit-content !important;
+  padding: 40px !important;
 }
