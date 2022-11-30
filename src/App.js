@@ -6,6 +6,7 @@ import ForgotPassword from "./page/ForgotPassword";
 import Home from "./page/Home";
 import Login from "./page/Login";
 import ResetPassword from "./page/ResetPassword";
+import Shopping from "./page/Shopping";
 import SignUp from "./page/SignUp";
 import ProtectedRoutes from "./ProtectedRoutes";
 
@@ -21,6 +22,7 @@ function App() {
         <Route element={<ProtectedRoutes />}>
           <Route path="/change-password" element={<ChangePassword />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/shopping" element={<Shopping />} />
         </Route>
       </Routes>
     </BrowserRouter>

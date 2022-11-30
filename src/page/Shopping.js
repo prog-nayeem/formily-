@@ -1,37 +1,37 @@
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import ApplicationComponent from "../components/ApplicationComponent";
 import { db } from "../components/firebase";
-import Model from "../components/Model";
+import ShoppingComponent from "../components/ShoppingComponent";
+import ShoppingModel from "../components/ShoppingModel";
 import Sidebar from "../components/Sidebar";
 
-const Dashboard = () => {
-  const [openModel, setOpenModel] = useState(false);
-  const [applications, setApplications] = useState([]);
+const Shopping = () => {
+  const [openShoppingModel, setOpenShoppingModel] = useState(false);
+  const [shoppings, setShoppings] = useState([]);
 
   const user = JSON.parse(localStorage.getItem("user"));
 
-  const getApplications = async () => {
+  const getShopping = async () => {
     const queryRef = query(
-      collection(db, "applications"),
+      collection(db, "shoppings"),
       where("user", "==", user?.uid)
     );
 
     const querySnapshot = await getDocs(queryRef);
-    const getApplications = [];
+    const getShopping = [];
     querySnapshot.forEach((doc) =>
-      getApplications.push({
-        application: doc.data(),
+      getShopping.push({
+        shopping: doc.data(),
         id: doc.id,
       })
     );
 
-    setApplications(getApplications);
+    setShoppings(getShopping);
   };
 
   useEffect(() => {
-    getApplications();
+    getShopping();
   }, []);
 
   return (
@@ -56,23 +56,26 @@ const Dashboard = () => {
             </NavLink>
           </p>
         </div>
-        <div className="flex mt-10 gap-8 flex-wrap bg-slate-50">
-          {applications?.map(({ id, application }) => (
-            <ApplicationComponent key={id} id={id} application={application} />
+        <div className="flex gap-8 mt-10 flex-wrap ">
+          {shoppings?.map(({ id, shopping }) => (
+            <ShoppingComponent key={id} id={id} shopping={shopping} />
           ))}
         </div>
         <div className="fixed bottom-10 right-8 z-40 ">
           <button
-            onClick={() => setOpenModel(true)}
+            onClick={() => setOpenShoppingModel(true)}
             className="button text-black hover:text-white mt-0 bg-transparent hover:bg-[#2cd6b5]"
           >
             Create New
           </button>
-          <Model openModel={openModel} setOpenModel={setOpenModel} />
+          <ShoppingModel
+            openShoppingModel={openShoppingModel}
+            setOpenShoppingModel={setOpenShoppingModel}
+          />
         </div>
       </div>
     </section>
   );
 };
 
-export default Dashboard;
+export default Shopping;

@@ -82,6 +82,7 @@ const EditModel = ({ openEditModel, setOpenEditModel, id, value }) => {
         type: "success",
         message: `Update successfully`,
       });
+      window.location.reload();
       setOpenEditModel(false);
     } catch (error) {
       setOpenAlert({

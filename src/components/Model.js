@@ -74,19 +74,7 @@ const Model = ({ openModel, setOpenModel }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!coverLetter || !resume) {
-      setOpenAlert({
-        open: true,
-        type: "error",
-        message: `Invalid field`,
-      });
-      return;
-    }
-
     try {
-      // const userApplicaton = {
-
-      // };
       const docRef = collection(db, "applications");
       await addDoc(docRef, {
         ...application,
@@ -100,6 +88,7 @@ const Model = ({ openModel, setOpenModel }) => {
         type: "success",
         message: `Application upload successfully`,
       });
+      window.location.reload();
       setOpenModel(false);
     } catch (error) {
       setOpenAlert({
@@ -178,7 +167,7 @@ const Model = ({ openModel, setOpenModel }) => {
             value={application.school}
             name="school"
             onChange={handleChange}
-            placeholder="ABC School"
+            placeholder="School"
           />
 
           <label className="label">Degree</label>

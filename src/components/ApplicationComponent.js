@@ -16,15 +16,21 @@ import { deleteDoc, doc } from "firebase/firestore";
 const ApplicationComponent = ({ id, application }) => {
   const [openEditModel, setOpenEditModel] = useState(false);
   const deleteApplication = (id) => {
-    deleteDoc(doc(db, "applications", id));
-    window.location.reload();
+    deleteDoc(doc(db, "applications", id))
+      .then(() => {
+        window.location.reload();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
     <div className="bg-white h-fit group relative p-4 rounded-md shadow-sm hover:shadow-md transition-all duration-300 ease-in-out max-w-fit">
       <img src="/" alt="" />
       <div>
-        <h2 className="font-semibold text-gray-900">{application?.name}</h2>
+        <h2 className="font-semibold text-gray-900">Job Application</h2>
+        <p className="text-gray-900 text-sm">{application?.name}</p>
         <p className="text-gray-700 text-sm">{application?.workExperience}</p>
         <div className="flex items-center space-x-3 mb-3 mt-1">
           <a

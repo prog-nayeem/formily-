@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="h-[80px] flex justify-between items-center px-12">
       <Link to="/">
         <h2 className="text-[#2cd6b5] text-4xl cursor-pointer font-bold">
-          Formily
+          Formify
         </h2>
       </Link>
       {user ? (
