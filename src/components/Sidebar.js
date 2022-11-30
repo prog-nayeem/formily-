@@ -51,7 +51,7 @@ const Sidebar = () => {
         <div className="h-[80px] px-6 flex items-center border-b">
           <Link to="/">
             <h2 className="text-[#2cd6b5] text-4xl cursor-pointer font-bold">
-              Formily
+              Formify
             </h2>
           </Link>
         </div>

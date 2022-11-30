@@ -119,7 +119,7 @@ const Model = ({ openModel, setOpenModel }) => {
             value={application.name}
             name="name"
             onChange={handleChange}
-            placeholder="John"
+            // placeholder="John"
           />
 
           <label className="label">Work Experience</label>
@@ -129,7 +129,7 @@ const Model = ({ openModel, setOpenModel }) => {
             value={application.workExperience}
             name="workExperience"
             onChange={handleChange}
-            placeholder="More than 3 year of experience"
+            // placeholder="More than 3 year of experience"
           />
 
           <label className="label">Address</label>
@@ -139,7 +139,7 @@ const Model = ({ openModel, setOpenModel }) => {
             value={application.address}
             name="address"
             onChange={handleChange}
-            placeholder="415 Centennial Farm Road"
+            // placeholder="415 Centennial Farm Road"
           />
 
           <label className="label">Resume</label>
@@ -167,7 +167,7 @@ const Model = ({ openModel, setOpenModel }) => {
             value={application.school}
             name="school"
             onChange={handleChange}
-            placeholder="School"
+            // placeholder="School"
           />
 
           <label className="label">Degree</label>
@@ -177,7 +177,7 @@ const Model = ({ openModel, setOpenModel }) => {
             value={application.degree}
             name="degree"
             onChange={handleChange}
-            placeholder="Bachelor degree"
+            // placeholder="Bachelor degree"
           />
 
           <label className="label">Major Discipline</label>
@@ -187,7 +187,7 @@ const Model = ({ openModel, setOpenModel }) => {
             value={application.majorDiscipline}
             name="majorDiscipline"
             onChange={handleChange}
-            placeholder=""
+            // placeholder=""
           />
 
           <label className="label">Start Year</label>
@@ -197,7 +197,7 @@ const Model = ({ openModel, setOpenModel }) => {
             value={application.startYear}
             name="startYear"
             onChange={handleChange}
-            placeholder="2014"
+            // placeholder="2014"
           />
 
           <label className="label">End Year</label>
@@ -207,7 +207,7 @@ const Model = ({ openModel, setOpenModel }) => {
             value={application.endYear}
             name="endYear"
             onChange={handleChange}
-            placeholder="2018"
+            // placeholder="2018"
           />
           <label className="label">Linkedin</label>
           <input
@@ -216,7 +216,7 @@ const Model = ({ openModel, setOpenModel }) => {
             value={application.linkedin}
             name="linkedin"
             onChange={handleChange}
-            placeholder="https://www.linkedin.com/in/nayem-ahammad"
+            // placeholder="https://www.linkedin.com/in/nayem-ahammad"
           />
           <label className="label">Personal Website</label>
           <input
@@ -225,7 +225,7 @@ const Model = ({ openModel, setOpenModel }) => {
             value={application.personalWebsite}
             name="personalWebsite"
             onChange={handleChange}
-            placeholder="https://www.nayemdev.com"
+            // placeholder="https://www.nayemdev.com"
           />
 
           <label className="label">How did you hear about us?</label>
@@ -264,7 +264,7 @@ const Model = ({ openModel, setOpenModel }) => {
             value={application.ethnicity}
             name="ethnicity"
             onChange={handleChange}
-            placeholder="American Indian or Alaska Native"
+            // placeholder="American Indian or Alaska Native"
           />
 
           <label className="label">Citizen</label>
@@ -274,7 +274,7 @@ const Model = ({ openModel, setOpenModel }) => {
             value={application.citizen}
             name="citizen"
             onChange={handleChange}
-            placeholder="US"
+            // placeholder="US"
           />
 
           <DialogActions sx={{ padding: "0px", marginTop: "20px" }}>
